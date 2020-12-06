@@ -1,0 +1,15 @@
+.bg-light {
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+nav.navbar-light a.navbar-brand{
+    font-size: 24pt;
+}
+
+nav.navbar-light li.nav-item a.nav-link{
+    font-size: 18pt;
+}
+
+.btn{
+    border: 10px;
+}
