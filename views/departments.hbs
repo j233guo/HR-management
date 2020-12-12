@@ -2,7 +2,7 @@
     <div class="col-md-12">
         <h2>
             Departments 
-            <button><a href="/departments/add" class="btn btn-success float-right">Add New Department</a></button>
+            <a href = "/departments/add"><button class="btn btn-success float-right">Add Department</button></a>
         </h2>
         <hr/>
         <p>
@@ -17,7 +17,11 @@
                     <tr>
                         <td><a href = "/department/{{departmentId}}">{{departmentId}}</a></td>
                         <td><a href = "/employees?department={{departmentId}}">{{departmentName}}</a></td>
-                        <td><button><a href="/departments/delete/{{departmentId}}" class="btn btn-danger">remove</a></button></td>
+                        <td>
+                            <a href="/departments/delete/{{departmentId}}">
+                                <button class = "btn btn-danger">Remove</button>
+                            </a>
+                        </td>
                     </tr>
                     {{/each}}
                 </table>

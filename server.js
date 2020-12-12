@@ -125,6 +125,10 @@ app.get("/employee/:empNum", (req, res) => {
     });
 });
 
+app.post("/employee/search", (req, res) => {
+    res.redirect("/employee/" + req.body.employeeNum);
+});
+
 app.post("/employee/update", (req, res) => {
     db.updateEmployee(req.body)
     .then(() => {res.redirect("/employees");})
@@ -186,6 +190,10 @@ app.get("/department/:id", (req, res) => {
     }).catch(() => {
         res.render("department", {message: "no result"});
     })
+});
+
+app.post("/department/search", (req, res) => {
+    res.redirect("/department/" + req.body.departmentId)
 });
 
 app.get("/departments/delete/:id", (req, res) => {
